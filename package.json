@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/guillermocorrea/remote-screen",
   "dependencies": {
-    "socket.io": "~1.0.6",
-    "express": "~4.8.5"
+    "express": "^4.8.5",
+    "socket.io": "^1.0.6"
   }
 }

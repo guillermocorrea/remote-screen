@@ -1,0 +1,9 @@
+language: "node_js"
+node_js:
+  - "0.10"
+before_install:
+services:
+install: npm install
+before_script: 
+script:
+after_success:
