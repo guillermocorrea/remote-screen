@@ -1,0 +1,26 @@
+{
+  "name": "remote-screen",
+  "version": "0.0.1",
+  "description": "A websocket experiment, from a desktop screen open a mobile browser able to control the desktop browser",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guillermocorrea/remote-screen.git"
+  },
+  "keywords": [
+    "websocket"
+  ],
+  "author": "Luis Guillermo Correa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guillermocorrea/remote-screen/issues"
+  },
+  "homepage": "https://github.com/guillermocorrea/remote-screen",
+  "dependencies": {
+    "socket.io": "~1.0.6",
+    "express": "~4.8.5"
+  }
+}

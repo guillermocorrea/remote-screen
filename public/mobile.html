@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Mobile remote control</title>
+</head>
+<body>
+<a href="" id="top" class="button-remote" data-y="0" data-action="go">Top</a>
+<a href="" id="up" class="button-remote" data-y="100" data-action="ffd">Up</a>
+<a href="" id="down" class="button-remote" data-y="100" data-action="rew">Down</a>
+<a href="" id="bottom" class="button-remote" data-y="max" data-action="go">Bottom</a>
+</body>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+    $('.button-remote').click(function (e) {
+        $.get('/action/secret/'+$(this).data('y')+ '/' + $(this).data('action'), function() {});
+    });
+</script>
+</html>
