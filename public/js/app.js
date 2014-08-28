@@ -10,7 +10,7 @@ function getDocHeight() {
         Math.max(D.body.clientHeight, D.documentElement.clientHeight)
     );
 }
-var socket = io.connect('http://localhost:3000');
+var socket = io.connect(Config.baseUrl);
 var y = 0;
 
 socket.emit('setKey', key);
@@ -29,4 +29,4 @@ socket.on('scrollTo', function (data) {
     window.scrollTo(0, y);
 
 });
-document.write('<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://localhost:3000/panel/' + key + '&choe=UTF-8" alt=""/>');
+document.write('<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=' + Config.baseUrl + '/panel/' + key + '&choe=UTF-8" alt=""/>');
