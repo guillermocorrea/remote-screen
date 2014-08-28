@@ -5,8 +5,10 @@ var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var express = require('express');
+var config = require('./config');
 
-server.listen(3000);
+var port = process.env.PORT || config.server.port;
+server.listen(port);
 
 app.use(express.static('public'));
 
@@ -35,4 +37,4 @@ io.on('connection', function (socket) {
     });
 });
 
-console.log('listening on port 3000');
+console.log('listening on port ' + port);
